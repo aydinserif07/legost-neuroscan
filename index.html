@@ -625,15 +625,15 @@ html.js .reveal.in { opacity:1; transform:none; }
     <div class="helmet-grid">
       <div>
         <div class="helmet-stage" id="hstage">
-          <img id="hmain" src="img/k360_00.webp" alt="LMSS İDER EEG kaskı" draggable="false">
+          <img id="hmain" src="k360_00.webp" alt="LMSS İDER EEG kaskı" draggable="false">
           <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
           <div class="drag-hint" id="dragHint" data-i18n="h_drag">⟲ Döndürmek için sürükleyin</div>
         </div>
         <div class="hthumbs" id="hthumbs">
-          <div class="hthumb on" data-mode="spin" data-cap="h_cap0"><img src="img/k360_00.webp" alt=""><span>360°</span></div>
-          <div class="hthumb" data-src="img/kask_kesit.webp" data-cap="h_cap1"><img src="img/kask_kesit.webp" alt=""></div>
-          <div class="hthumb" data-src="img/kask_parcalar.webp" data-cap="h_cap2"><img src="img/kask_parcalar.webp" alt=""></div>
-          <div class="hthumb" data-src="img/elektrot.webp" data-cap="h_cap3"><img src="img/elektrot.webp" alt=""></div>
+          <div class="hthumb on" data-mode="spin" data-cap="h_cap0"><img src="k360_00.webp" alt=""><span>360°</span></div>
+          <div class="hthumb" data-src="kask_kesit.webp" data-cap="h_cap1"><img src="kask_kesit.webp" alt=""></div>
+          <div class="hthumb" data-src="kask_parcalar.webp" data-cap="h_cap2"><img src="kask_parcalar.webp" alt=""></div>
+          <div class="hthumb" data-src="elektrot.webp" data-cap="h_cap3"><img src="elektrot.webp" alt=""></div>
         </div>
         <div class="hcap" id="hcap" data-i18n="h_cap0">Montajlı kask, 360° görünüm</div>
       </div>
@@ -1137,7 +1137,7 @@ for (let i=0; i<50; i++) {
 
   // Kask: 360° sürükle-döndür + galeri
   const NF=36, stage=document.getElementById('hstage'), hmain=document.getElementById('hmain'), hint=document.getElementById('dragHint');
-  const fsrc=i=>'img/k360_'+String(i).padStart(2,'0')+'.webp';
+  const fsrc=i=>'k360_'+String(i).padStart(2,'0')+'.webp';
   let fi=0, facc=0, spin=true, auto=true, dragX=null, loaded=0;
   for(let i=0;i<NF;i++){ const im=new Image(); im.onload=()=>loaded++; im.src=fsrc(i); }
   function setFrame(i){ fi=((i%NF)+NF)%NF; hmain.src=fsrc(fi); }
